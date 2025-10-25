@@ -1,6 +1,7 @@
 import { Weapon } from "./Weapon";
 import { Gun } from "./Gun";
 import { Sword } from "./Sword";
+import { Excalibur } from "./Excalibur";
 
 
 // test weapon
@@ -23,7 +24,18 @@ console.log("Bonus :", pistol.bonus());
 
 
 // test sword
-const excalibur = new Sword("Excalibur", 120, 15, 3500, 1000, true, 1000);
+const leviathan = new Sword("Leviathan", 120, 15, 3500, 1000, true, 1000);
+
+console.log("Nom :", leviathan.name);
+console.log("Légendaire :", leviathan.legendary);
+console.log("Année :", leviathan.year);
+console.log("Durée de vie (ans) :", leviathan.duration());
+console.log("Dégâts :", leviathan.damage());
+console.log("Bonus :", leviathan.bonus());
+
+
+// test excalibur 
+const excalibur = new Excalibur("Excalibur", 120, 15, 3500, 1000, 1000);
 
 console.log("Nom :", excalibur.name);
 console.log("Légendaire :", excalibur.legendary);
