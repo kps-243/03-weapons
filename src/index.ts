@@ -2,6 +2,7 @@ import { Weapon } from "./Weapon";
 import { Gun } from "./Gun";
 import { Sword } from "./Sword";
 import { Excalibur } from "./Excalibur";
+import { Character } from "./Character";
 
 
 // test weapon
@@ -43,3 +44,16 @@ console.log("Année :", excalibur.year);
 console.log("Durée de vie (ans) :", excalibur.duration());
 console.log("Dégâts :", excalibur.damage());
 console.log("Bonus :", excalibur.bonus());
+
+
+// test character
+
+const hero = new Character("Morgan");
+const villain = new Character("Zack");
+
+console.log(hero.attack(villain, pistol));
+console.log(`${villain.name} a maintenant ${villain.health.toFixed(2)} points de vie.`);
+
+// Exemple de protection
+const damageBlocked = villain.protect(1000);
+console.log(`${villain.name} bloque une partie de l'attaque et subit ${damageBlocked.toFixed(2)} points de dégâts.`);
